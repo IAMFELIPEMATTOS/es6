@@ -45,7 +45,7 @@ Apologies about that long table of contents, and here we go.
   - Since ES6 pre-dates that decision, most of us still call it ES6
   - Começando com ES2016 (ES7), nos devemos iniciar usando o padrão`ES[ano]` para referenciar versões mais recentes
   - Top reason for naming scheme is to pressure browser vendors into quickly implementing newest features
-  - A maior razão para () é que fabricantes dos browesers tem pressionado para implementar rapidamente novas funcionalidades
+  - A maior razão para () é que fabricantes dos browsers tem pressionado para implementar rapidamente novas funcionalidades
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
@@ -79,10 +79,10 @@ Apologies about that long table of contents, and here we go.
 - Properties that aren't found yield `undefined` as usual, e.g: `var {foo} = {}`
 - Deeply nested properties that aren't found yield an error, e.g: `var {foo: {bar}} = {}`
 - It also works for arrays, `var [a, b] = [0, 1]` yields `a: 0` and `b: 1`
-- You can skip items in an array, `var [a, , b] = [0, 1, 2]`, getting `a: 0` and `b: 2`
+- Você pode pular itens em um array, `var [a, , b] = [0, 1, 2]`, getting `a: 0` and `b: 2`
 - You can swap without an _"aux"_ variable, `[a, b] = [b, a]`
 - Você tambem pode usar o destructuring nos parametros da função
-  - Assign default values like `function foo (bar=2) {}`
+  - Atribuir valores padrão como `function foo (bar=2) {}`
   - Those defaults can be objects, too `function foo (bar={ a: 1, b: 2 }) {}`
   - Destructure `bar` completely, like `function foo ({ a=1, b=2 }) {}`
   - Padrão para um objeto vazio se nada for fornecido, como `function foo ({ a=1, b=2 } = {}) {}`
@@ -100,10 +100,10 @@ Apologies about that long table of contents, and here we go.
   - `...rest` must be the last parameter in the list
 - Spread operator is better than magic, also denoted with `...` syntax
   - Avoids `.apply` when calling methods, `fn(...[1, 2, 3])` is equivalent to `fn(1, 2, 3)`
-  - Easier concatenation `[1, 2, ...[3, 4, 5], 6, 7]`
+  - Fácil concatenação `[1, 2, ...[3, 4, 5], 6, 7]`
   - Casts array-likes or iterables into an array, e.g `[...document.querySelectorAll('img')]`
   - Useful when [destructuring](#assignment-destructuring) too, `[a, , ...rest] = [1, 2, 3, 4, 5]` yields `a: 1` and `rest: [3, 4, 5]`
-  - Makes `new` + `.apply` effortless, `new Date(...[2015, 31, 8])`
+  - Faça sem problemas `new` + `.apply`, `new Date(...[2015, 31, 8])`
 - Leia [ES6 Spread and Butter in Depth][6]
 
 <sup>[(voltar ao indice de conteudos)](#indice-do-conteudo)</sup>
